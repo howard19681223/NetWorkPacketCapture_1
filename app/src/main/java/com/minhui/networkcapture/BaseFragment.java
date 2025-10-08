@@ -24,7 +24,7 @@ public abstract class BaseFragment extends Fragment {
     abstract int getLayout();
 
     public void onVisible() {
-
+int i = 1+6;
     }
 
     public void onInVisible() {
