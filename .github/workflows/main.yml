@@ -43,7 +43,7 @@ jobs:
 
     # 编译项目
     - name: Build with Gradle
-      run: ./gradlew build --stacktrace
+      run: ./gradlew build 
 
     # （可选）运行测试
     - name: Run tests
