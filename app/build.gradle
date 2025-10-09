@@ -3,11 +3,11 @@ plugins {
      }
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 33
     defaultConfig {
         applicationId "com.minhui.networkcapture"
         minSdkVersion 19
-        targetSdkVersion 26
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0.5"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
