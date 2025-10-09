@@ -292,7 +292,7 @@ public class FirewallVpnService extends VpnService implements Runnable {
 
             }
 
-            //转发给本地TCP服务器
+            //转发给本地TCP服务器，，，这里好像使用了奇淫技巧，把非常重要的目的地址暂存到源地址。
             ipHeader.setSourceIP(ipHeader.getDestinationIP());
             ipHeader.setDestinationIP(LOCAL_IP);
             tcpHeader.setDestinationPort(mTcpProxyServer.port);
