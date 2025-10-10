@@ -4,7 +4,7 @@ package com.minhui.networkcapture;
 import android.os.Bundle;
 import android.os.Handler;
 import androidx.annotation.Nullable;
-import androidx.v4.widget.SwipeRefreshLayout;
+import androidx.core.widget.SwipeRefreshLayout;
 import androidx.v7.widget.LinearLayoutManager;
 import androidx.v7.widget.RecyclerView;
 import android.view.View;
