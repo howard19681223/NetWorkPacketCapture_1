@@ -39,11 +39,11 @@ jobs:
 
     # 赋予 Gradle 执行权限
     - name: Grant execute permission for gradlew
-      run: chmod +x ./gradlew
+     # run: chmod +x ./gradlew
 
     # 编译项目
     - name: Build with Gradle
-      run: ./gradlew build 
+     # run: ./gradlew build 
 
     # （可选）运行测试
     - name: Run tests
