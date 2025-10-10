@@ -3,6 +3,7 @@ plugins {
      }
 
 android {
+    namespace  'com.minhui.networkcapture'
     compileSdkVersion 34
     defaultConfig {
         applicationId "com.minhui.networkcapture"
