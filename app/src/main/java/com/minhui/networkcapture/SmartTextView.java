@@ -11,7 +11,7 @@ import android.widget.TextView;
  *         Copyright © 2017年 Oceanwing. All rights reserved.
  */
 
-public class SmartTextView extends android.support.v7.widget.AppCompatTextView {
+public class SmartTextView extends androidx.v7.widget.AppCompatTextView {
 
 
     public SmartTextView(Context context) {
