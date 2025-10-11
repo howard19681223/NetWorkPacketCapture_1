@@ -125,11 +125,16 @@ public class HistoryFragment extends BaseFragment {
 
         @Override
         public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
-            ((CommonHolder) holder).date.setText(list[position]);
+
+        final int actualPos1 = holder.getAdapterPosition();
+    if (actualPos1 == RecyclerView.NO_POSITION) {
+        return;
+    }
+            ((CommonHolder) holder).date.setText(list[actualPos1]);
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    String fileDir = VPNConstants.CONFIG_DIR + rawList[position];
+                    String fileDir = VPNConstants.CONFIG_DIR + rawList[actualPos1];
                     ConnectionListActivity.openActivity(getActivity(), fileDir);
                 }
             });
