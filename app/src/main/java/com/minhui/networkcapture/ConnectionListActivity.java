@@ -136,7 +136,7 @@ public class ConnectionListActivity extends Activity {
             if (connection.getAppInfo() != null) {
                 icon = AppInfo.getIcon(getApplication(), connection.getAppInfo().pkgs.getAt(0));
             } else {
-                icon = getResources().getDrawable(R.drawable.sym_def_app_icon);
+                icon = getResources().getDrawable(R.drawable.app_icon);
             }
 
             connectionHolder.icon.setImageDrawable(icon);
