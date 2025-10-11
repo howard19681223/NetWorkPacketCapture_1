@@ -173,18 +173,18 @@ public class ConnectionListActivity extends Activity {
 
             connectionHolder.size.setText(showSum);
 
-   actualPosition = holder.getAdapterPosition();
-    if (actualPosition == RecyclerView.NO_POSITION) {
+     final int actualPos1 = holder.getAdapterPosition();
+    if (actualPos1 == RecyclerView.NO_POSITION) {
         return;
     }
 
             connectionHolder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (baseNetSessions.get(actualPosition).isHttpsSession()) {
+                    if (baseNetSessions.get(actualPos1).isHttpsSession()) {
                         return;
                     }
-                    startPacketDetailActivity(baseNetSessions.get(actualPosition));
+                    startPacketDetailActivity(baseNetSessions.get(actualPos1));
 
 
                 }
