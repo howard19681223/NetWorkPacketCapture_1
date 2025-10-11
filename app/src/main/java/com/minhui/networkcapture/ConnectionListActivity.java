@@ -130,7 +130,13 @@ public class ConnectionListActivity extends Activity {
 
         @Override
         public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
-            final NatSession connection = baseNetSessions.get(position);
+
+    int actualPosition = holder.getAdapterPosition();
+    if (actualPosition == RecyclerView.NO_POSITION) {
+        return;
+    }
+
+            final NatSession connection = baseNetSessions.get(actualPosition);
             ConnectionHolder connectionHolder = (ConnectionHolder) holder;
             Drawable icon;
             if (connection.getAppInfo() != null) {
@@ -166,13 +172,19 @@ public class ConnectionListActivity extends Activity {
             }
 
             connectionHolder.size.setText(showSum);
+
+   actualPosition = holder.getAdapterPosition();
+    if (actualPosition == RecyclerView.NO_POSITION) {
+        return;
+    }
+
             connectionHolder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (baseNetSessions.get(position).isHttpsSession()) {
+                    if (baseNetSessions.get(actualPosition).isHttpsSession()) {
                         return;
                     }
-                    startPacketDetailActivity(baseNetSessions.get(position));
+                    startPacketDetailActivity(baseNetSessions.get(actualPosition));
 
 
                 }
